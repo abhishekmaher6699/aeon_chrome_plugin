@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Article Recommender",
+  "version": "1.0",
+  "description": "Get article recommendations for Aeon essays.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["https://aeon.co/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://aeon.co/essays/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
