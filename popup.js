@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const currentUrl = currentTab.url;
 
         if (currentUrl.trim().startsWith('https://aeon.co/essays/')) {
-            fetch(`http://35.173.126.231/reccomend_with_url/?url=${encodeURIComponent(currentUrl)}`)
+            fetch(`http://35.173.126.231:8000/reccomend_with_url/?url=${encodeURIComponent(currentUrl)}`)
             .then(response => response.json())
             .then(data => {
                 if (!data || Object.keys(data).length === 0) {
