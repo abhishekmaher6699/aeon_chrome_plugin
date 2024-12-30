@@ -20,9 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     if (item.image) {
                         card.style.backgroundImage = `url(${item.image})`;
-                        card.style.backgroundSize = 'cover'; // Ensures the image covers the card without distorting
-                        card.style.backgroundPosition = 'center'; // Centers the image within the card
-                    }
+                        card.style.backgroundSize = 'cover'; 
+                        card.style.backgroundPosition = 'center';                     }
 
                     const cardContent = `
                     <a href="${item.url}" target="_blank" class="read-more-link">
